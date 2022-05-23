@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 
 import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
+import getStripe from '../lib/getStripe';
 
 const Cart = () => {
   const cartRef = useRef();
@@ -96,6 +97,9 @@ const Cart = () => {
               <h3>Subtotal:</h3>
               <h3>${totalPrice}</h3>
             </div>
+            <br/>
+            <h4>If you check out use test card number 424242424242 in Stripe</h4>
+
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>
                 Pay with Stripe
